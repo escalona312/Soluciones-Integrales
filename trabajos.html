@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Más Proyectos | Soluciones Integrales - Trabajos Realizados</title>
+  <meta name="description" content="Portafolio completo de trabajos realizados por Soluciones Integrales en Angol. Instalaciones eléctricas, construcción, renovaciones y más proyectos." />
+  <meta name="keywords" content="proyectos Angol, trabajos realizados, portafolio construcción, instalaciones eléctricas Angol, renovaciones" />
+  <meta name="author" content="Soluciones Integrales" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header con navegación -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="flex items-center space-x-2">
+            <img src="LOGO (1) (1).png" alt="Soluciones Integrales" class="h-12 w-auto" />
+            <span class="text-xl font-bold text-gray-800">Soluciones Integrales</span>
+          </a>
+        </div>
+        
+        <!-- Navegación desktop -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="index.html#servicios" class="text-gray-600 hover:text-blue-600 transition">Servicios</a>
+          <a href="index.html#nosotros" class="text-gray-600 hover:text-blue-600 transition">Nosotros</a>
+          <a href="index.html#contacto" class="text-gray-600 hover:text-blue-600 transition">Contacto</a>
+          <a href="index.html" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">
+            Volver al Inicio
+          </a>
+        </nav>
+
+        <!-- Botón hamburguesa para móvil -->
+        <button id="menu-toggle" class="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1 focus:outline-none">
+          <span class="block w-6 h-0.5 bg-gray-600 transition-all duration-300 transform"></span>
+          <span class="block w-6 h-0.5 bg-gray-600 transition-all duration-300 transform"></span>
+          <span class="block w-6 h-0.5 bg-gray-600 transition-all duration-300 transform"></span>
+        </button>
+      </div>
+
+      <!-- Menú móvil -->
+      <nav id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
+        <div class="flex flex-col space-y-4 pt-4">
+          <a href="index.html#servicios" class="text-gray-600 hover:text-blue-600 transition py-2">Servicios</a>
+          <a href="index.html#nosotros" class="text-gray-600 hover:text-blue-600 transition py-2">Nosotros</a>
+          <a href="index.html#contacto" class="text-gray-600 hover:text-blue-600 transition py-2">Contacto</a>
+          <a href="index.html" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition text-center">
+            Volver al Inicio
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        Nuestro Portafolio Completo
+      </h1>
+      <p class="text-xl text-white/90 max-w-3xl mx-auto">
+        Descubre todos los proyectos que hemos realizado en Angol y la región. 
+        Cada trabajo refleja nuestro compromiso con la calidad y la excelencia.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filtros de categorías -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <button onclick="filtrarProyectos('todos')" class="filtro-btn active px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+          Todos los Proyectos
+        </button>
+        <button onclick="filtrarProyectos('electricidad')" class="filtro-btn px-6 py-3 bg-white text-gray-700 rounded-full hover:bg-gray-100 transition border">
+          Electricidad
+        </button>
+        <button onclick="filtrarProyectos('construccion')" class="filtro-btn px-6 py-3 bg-white text-gray-700 rounded-full hover:bg-gray-100 transition border">
+          Construcción
+        </button>
+        <button onclick="filtrarProyectos('renovacion')" class="filtro-btn px-6 py-3 bg-white text-gray-700 rounded-full hover:bg-gray-100 transition border">
+          Renovaciones
+        </button>
+        <button onclick="filtrarProyectos('pintura')" class="filtro-btn px-6 py-3 bg-white text-gray-700 rounded-full hover:bg-gray-100 transition border">
+          Pintura
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid de proyectos -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div id="proyectos-grid" class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Proyecto 1: Electricidad -->
+        <div class="proyecto-card electricidad bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="swiper mySwiper relative">
+            <div class="swiper-wrapper">
+              <img src="Tableroelectronico.png" class="swiper-slide w-full h-56 object-cover" alt="Tablero eléctrico actualizado">
+              <img src="tableroelectronico2.png" class="swiper-slide w-full h-56 object-cover" alt="Instalación de protecciones">
+            </div>
+            <div class="swiper-pagination !bottom-2"></div>
+            <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+            <div class="swiper-button-next !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Electricidad</span>
+              <span class="text-xs text-gray-500">2024</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-800 mb-2">Actualización de Tablero Eléctrico SEC</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Modernización completa del tablero eléctrico residencial con instalación de protecciones diferenciales 
+              y disyuntores de última generación, cumpliendo con la normativa SEC.
+            </p>
+            <div class="flex items-center text-sm text-gray-500">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              Angol, Araucanía
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 2: Pintura -->
+        <div class="proyecto-card pintura bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="swiper mySwiper relative">
+            <div class="swiper-wrapper">
+              <img src="Pintura.png" class="swiper-slide w-full h-56 object-cover" alt="Aplicación de esmalte">
+              <img src="Pintura2.png" class="swiper-slide w-full h-56 object-cover" alt="Acabado final">
+            </div>
+            <div class="swiper-pagination !bottom-2"></div>
+            <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+            <div class="swiper-button-next !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full">Pintura</span>
+              <span class="text-xs text-gray-500">2024</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-800 mb-2">Esmalte al Agua Sherwin Williams</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Preparación completa de superficies con empaste, lijado y aplicación de dos manos de esmalte 
+              al agua Sherwin Williams para acabado satinado de alta durabilidad.
+            </p>
+            <div class="flex items-center text-sm text-gray-500">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              Santiago, Florida
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 3: Renovación -->
+        <div class="proyecto-card renovacion bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="swiper mySwiper relative">
+            <div class="swiper-wrapper">
+              <img src="alisaryeso.png" class="swiper-slide w-full h-56 object-cover" alt="Proceso de alisado">
+              <img src="alisaryeso2.png" class="swiper-slide w-full h-56 object-cover" alt="Muro preparado">
+              <img src="image.png" class="swiper-slide w-full h-56 object-cover" alt="Acabado final">
+            </div>
+            <div class="swiper-pagination !bottom-2"></div>
+            <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+            <div class="swiper-button-next !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-orange-100 text-orange-800 text-xs font-medium px-3 py-1 rounded-full">Renovación</span>
+              <span class="text-xs text-gray-500">2024</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-800 mb-2">Alisado de Muros con Yeso</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Transformación de muros irregulares en superficies perfectamente lisas usando yeso de alta calidad. 
+              Preparación ideal para acabados de pintura impecables.
+            </p>
+            <div class="flex items-center text-sm text-gray-500">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              Angol, Araucanía
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 4: Electricidad Industrial -->
+        <div class="proyecto-card electricidad bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="swiper mySwiper relative">
+            <div class="swiper-wrapper">
+              <img src="WhatsApp Unknown 2025-07-31 at 3.01.54 AM/WhatsApp Image 2025-07-31 at 12.51.08 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Tablero industrial 1">
+              <img src="WhatsApp Unknown 2025-07-31 at 3.01.54 AM/WhatsApp Image 2025-07-31 at 12.51.08 AM (2).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Tablero industrial 2">
+              <img src="WhatsApp Unknown 2025-07-31 at 3.01.54 AM/WhatsApp Image 2025-07-31 at 12.51.08 AM (3).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Tablero industrial 3">
+              <img src="WhatsApp Unknown 2025-07-31 at 3.01.54 AM/WhatsApp Image 2025-07-31 at 12.51.08 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Tablero industrial 4">
+            </div>
+            <div class="swiper-pagination !bottom-2"></div>
+            <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+            <div class="swiper-button-next !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Electricidad Industrial</span>
+              <span class="text-xs text-gray-500">2024</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-800 mb-2">Tablero para Motores Eléctricos</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Regularización y modernización de tableros eléctricos para motores industriales, 
+              asegurando funcionamiento seguro y cumplimiento de normativas vigentes.
+            </p>
+            <div class="flex items-center text-sm text-gray-500">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              Angol, Araucanía
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Proyecto 7: Postación y Cableado Aéreo -->
+        <div class="proyecto-card electricidad bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="swiper mySwiper relative">
+            <div class="swiper-wrapper">
+              <img src="Postacion y cableado aéreo para instalaciones ele trica domiciliarias/WhatsApp Image 2025-07-31 at 12.50.04 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Instalación de postación eléctrica">
+              <img src="Postacion y cableado aéreo para instalaciones ele trica domiciliarias/WhatsApp Image 2025-07-31 at 12.50.04 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Cableado aéreo domiciliario">
+            </div>
+            <div class="swiper-pagination !bottom-2"></div>
+            <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+            <div class="swiper-button-next !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Electricidad</span>
+              <span class="text-xs text-gray-500">2024</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-800 mb-2">Postación y Cableado Aéreo Domiciliario</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Instalación completa de postación eléctrica y cableado aéreo para conexiones domiciliarias. 
+              Trabajo realizado con materiales de primera calidad y cumpliendo todas las normativas SEC.
+            </p>
+            <div class="flex items-center text-sm text-gray-500">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              Angol, Araucanía
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 8: Empaste, Yeso y Pintura -->
+        <div class="proyecto-card renovacion bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="swiper mySwiper relative">
+            <div class="swiper-wrapper">
+              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.43 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Proceso de empaste y preparación">
+              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.43 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Aplicación de yeso">
+              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.43 AM (2).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Trabajo de alisado">
+              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Preparación para pintura">
+              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Aplicación de pintura">
+              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM (2).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Acabado final">
+              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM (3).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Resultado final">
+              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM (4).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Detalle del acabado">
+              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.45 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Vista general del proyecto">
+              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.45 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Detalle de la pintura">
+              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.45 AM (2).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Resultado completo">
+            </div>
+            <div class="swiper-pagination !bottom-2"></div>
+            <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+            <div class="swiper-button-next !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-orange-100 text-orange-800 text-xs font-medium px-3 py-1 rounded-full">Renovación</span>
+              <span class="text-xs text-gray-500">2024</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-800 mb-2">Empaste, Yeso y Pintura Integral</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Servicio completo de renovación que incluye empaste de imperfecciones, aplicación de yeso para alisado perfecto 
+              y pintura de alta calidad. Transformación total de superficies para un acabado profesional y duradero.
+            </p>
+            <div class="flex items-center text-sm text-gray-500">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              Angol, Araucanía
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        ¿Te gustó nuestro trabajo?
+      </h2>
+      <p class="text-xl text-white/90 mb-8">
+        Contáctanos para discutir tu próximo proyecto. Estamos aquí para hacer realidad tus ideas.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/56935172731?text=Hola,%20vi%20su%20portafolio%20y%20me%20gustaría%20cotizar%20un%20proyecto" 
+           target="_blank"
+           class="inline-flex items-center px-8 py-4 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition shadow-lg">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.58-1.452L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.267.655 4.398 1.908 6.161l-1.317 4.814 4.893-1.292z"/>
+          </svg>
+          Cotizar por WhatsApp
+        </a>
+        <a href="index.html#contacto" 
+           class="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition shadow-lg">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          Enviar Mensaje
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <img src="LOGO (1) (1).png" alt="Soluciones Integrales" class="h-10 w-auto" />
+            <span class="text-xl font-bold">Soluciones Integrales</span>
+          </div>
+          <p class="text-gray-400">
+            Construcción, mantenimiento y servicios técnicos profesionales en Angol y la región de La Araucanía.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+          <div class="space-y-2 text-gray-400">
+            <p>+56 9 3517 2731</p>
+            <p>Mauricioeazocar@gmail.com</p>
+            <p>Cerro Negro #1388, Angol</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Enlaces</h3>
+          <div class="space-y-2">
+            <a href="index.html" class="block text-gray-400 hover:text-white transition">Inicio</a>
+            <a href="index.html#servicios" class="block text-gray-400 hover:text-white transition">Servicios</a>
+            <a href="index.html#nosotros" class="block text-gray-400 hover:text-white transition">Nosotros</a>
+            <a href="index.html#contacto" class="block text-gray-400 hover:text-white transition">Contacto</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Soluciones Integrales. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/56935172731?text=Hola,%20quisiera%20solicitar%20una%20cotización." target="_blank"
+    class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50"
+    aria-label="Contactar por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.58-1.452L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.267.655 4.398 1.908 6.161l-1.317 4.814 4.893-1.292z" />
+    </svg>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <script>
+    // Inicializar Swiper
+    new Swiper('.mySwiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+    });
+
+    // Funcionalidad del menú móvil
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerLines = menuToggle.querySelectorAll('span');
+
+      menuToggle.addEventListener('click', function() {
+        // Toggle del menú
+        mobileMenu.classList.toggle('hidden');
+        
+        // Animación del botón hamburguesa
+        if (!mobileMenu.classList.contains('hidden')) {
+          // Menú abierto - animar a X
+          hamburgerLines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+          hamburgerLines[1].style.opacity = '0';
+          hamburgerLines[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        } else {
+          // Menú cerrado - volver a hamburguesa
+          hamburgerLines[0].style.transform = 'rotate(0deg) translate(0, 0)';
+          hamburgerLines[1].style.opacity = '1';
+          hamburgerLines[2].style.transform = 'rotate(0deg) translate(0, 0)';
+        }
+      });
+
+      // Cerrar menú al hacer click en un enlace
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.add('hidden');
+          // Resetear animación del botón
+          hamburgerLines[0].style.transform = 'rotate(0deg) translate(0, 0)';
+          hamburgerLines[1].style.opacity = '1';
+          hamburgerLines[2].style.transform = 'rotate(0deg) translate(0, 0)';
+        });
+      });
+
+      // Cerrar menú al redimensionar la ventana
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) { // md breakpoint
+          mobileMenu.classList.add('hidden');
+          // Resetear animación del botón
+          hamburgerLines[0].style.transform = 'rotate(0deg) translate(0, 0)';
+          hamburgerLines[1].style.opacity = '1';
+          hamburgerLines[2].style.transform = 'rotate(0deg) translate(0, 0)';
+        }
+      });
+    });
+
+    // Función para filtrar proyectos
+    function filtrarProyectos(categoria) {
+      const proyectos = document.querySelectorAll('.proyecto-card');
+      const botones = document.querySelectorAll('.filtro-btn');
+      
+      // Remover clase active de todos los botones
+      botones.forEach(btn => {
+        btn.classList.remove('active', 'bg-blue-600', 'text-white');
+        btn.classList.add('bg-white', 'text-gray-700', 'border');
+      });
+      
+      // Agregar clase active al botón clickeado
+      event.target.classList.add('active', 'bg-blue-600', 'text-white');
+      event.target.classList.remove('bg-white', 'text-gray-700', 'border');
+      
+      // Mostrar/ocultar proyectos según categoría
+      proyectos.forEach(proyecto => {
+        if (categoria === 'todos' || proyecto.classList.contains(categoria)) {
+          proyecto.style.display = 'block';
+          proyecto.style.animation = 'fadeIn 0.5s ease-in';
+        } else {
+          proyecto.style.display = 'none';
+        }
+      });
+    }
+
+    // Animación de entrada
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.proyecto-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    });
+  </script>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .proyecto-card {
+      transition: all 0.3s ease;
+    }
+    
+    .proyecto-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Estilos para el menú móvil */
+    #mobile-menu {
+      transition: all 0.3s ease-in-out;
+    }
+
+    #mobile-menu:not(.hidden) {
+      animation: slideDown 0.3s ease-in-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mejoras para el botón hamburguesa */
+    #menu-toggle:hover span {
+      background-color: #2563eb;
+    }
+
+    #menu-toggle:focus {
+      outline: 2px solid #2563eb;
+      outline-offset: 2px;
+    }
+
+    /* Mejoras para enlaces móviles */
+    #mobile-menu a {
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    #mobile-menu a:hover {
+      background-color: #f3f4f6;
+      padding-left: 1rem;
+    }
+  </style>
+
+</body>
+</html>

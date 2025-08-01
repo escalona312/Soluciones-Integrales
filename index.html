@@ -81,7 +81,7 @@
   }
   </script>
   
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./dist/output.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <meta name="description"
@@ -122,10 +122,16 @@
           <li>Renovaciones y mantenimiento general</li>
         </ul>
 
-        <a href="#contacto"
-          class="inline-block mt-4 text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 transition-all duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-base px-6 py-3 shadow-lg">
-          Solicita tu cotización
-        </a>
+        <div class="flex flex-col sm:flex-row gap-4 mt-4">
+          <a href="#contacto"
+            class="inline-block text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 transition-all duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-base px-6 py-3 shadow-lg">
+            Solicita tu cotización
+          </a>
+                     <a href="#trabajos"
+             class="inline-block text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 transition-all duration-300 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-full text-base px-6 py-3 shadow-lg">
+             Ver Proyectos
+           </a>
+        </div>
       </div>
 
       <!-- Columna derecha: Imagen SIN fondo -->
@@ -292,7 +298,7 @@
 
 
 
-  <section class="bg-gray-50 py-20">
+  <section id="trabajos" class="bg-gray-50 py-20">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">Trabajos Realizados</h2>
 
@@ -501,27 +507,62 @@
 
 
 <section id="nosotros" class="py-20 bg-white">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Sobre Nosotros</h2>
-    <p class="text-gray-700 text-lg leading-relaxed">
-      En <strong>Soluciones Integrales</strong> nos dedicamos a la construcción y mantenimiento del hogar, ofreciendo un servicio completo y profesional para que tu casa esté siempre en las mejores condiciones.
-    </p>
-    <p class="text-gray-700 text-lg leading-relaxed mt-4">
-      Soy <strong>Mauricio Azocar</strong>, y junto a mi equipo trabajamos con compromiso y calidad en cada proyecto. Desde cimientos hasta instalaciones eléctricas, nuestra misión es entregarte soluciones confiables, seguras y a tu medida.
-    </p>
-    <p class="text-gray-700 text-lg leading-relaxed mt-4">
-      <strong>Servicios que ofrecemos:</strong><br>
-      - Construcción de cimientos y estructuras<br>
-      - Instalación de techos y acabados interiores<br>
-      - Servicios de electricidad y fontanería<br>
-      - Climatización e instalación de aislantes<br>
-      - Renovaciones y mantenimiento general
-    </p>
-    <p class="text-blue-600 font-medium mt-6">
-      Confía en nosotros para cuidar y mejorar tu hogar como si fuera el nuestro.
-    </p>
-  </div>
-</section>
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
+      <!-- Contenido de texto -->
+      <div class="text-left order-2 md:order-1">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 lg:mb-6">¡Soluciones Integrales para la Construcción y Mantenimiento de Tu Hogar!</h2>
+        
+        <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-4 lg:mb-6">
+          ¡Hola! Soy <strong>Mauricio Azocar</strong> y en nuestra empresa nos dedicamos a asegurarnos de que tu casa siempre esté en perfectas condiciones. Ofrecemos una amplia gama de servicios para que tu hogar sea el lugar de tus sueños.
+        </p>
+        
+        <div class="mb-4 lg:mb-6">
+          <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-3 lg:mb-4">Nuestros Servicios Incluyen:</h3>
+          <ul class="text-gray-700 text-sm md:text-base lg:text-lg space-y-2 lg:space-y-3">
+            <li><strong>Construcción de Radieres y Estructuras Metálicas:</strong> Base sólida para tu hogar.</li>
+            <li><strong>Instalación de Techos y Acabados Interiores:</strong> Diseño y funcionalidad para cada espacio.</li>
+            <li><strong>Servicios de Electricidad y Gasfitería:</strong> Seguridad y confort que puedes confiar.</li>
+            <li><strong>Climatización:</strong> Instalación de aires acondicionados y aislamiento EIF para un hogar fresco y cómodo.</li>
+            <li><strong>Remodelaciones y Mantenimiento General:</strong> Renovamos y cuidamos tu espacio como si fuera el nuestro.</li>
+            <li><strong>Construcción en General:</strong> Desde la primera idea hasta la finalización del proyecto, te acompañamos.</li>
+          </ul>
+        </div>
+        
+        <div class="bg-blue-50 p-4 lg:p-6 rounded-lg mb-4 lg:mb-6">
+          <p class="text-blue-800 font-medium mb-3 lg:mb-4 text-sm md:text-base">⭐ Contáctame para obtener una consulta personalizada. Juntos podemos mejorar y transformar tus espacios.</p>
+          
+          <div class="space-y-1 lg:space-y-2 text-blue-800 text-sm md:text-base">
+            <p><strong>📞 Teléfono:</strong> +56935172731</p>
+            <p><strong>📧 Correo:</strong> mauricioeazocar@gmail.com</p>
+          </div>
+        </div>
+        
+        <p class="text-blue-600 font-medium text-base md:text-lg">
+          ¡Estamos emocionados de trabajar contigo y transformar tu hogar en el lugar que siempre has soñado!
+        </p>
+      </div>
+      
+      <div class="aspect-[9/16] w-full max-w-[280px] sm:max-w-[300px] md:max-w-[340px] lg:max-w-[400px] xl:max-w-[460px] mx-auto rounded-lg overflow-hidden shadow-lg">
+        <video 
+          class="w-full h-full object-cover"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="assets/videos/poster.jpg">
+          <source src="assets/videos/WhatsApp Video 2025-07-31 at 9.11.17 PM.mp4" type="video/mp4">
+          <source src="assets/videos/video-promocional.webm" type="video/webm">
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+      
+      
+
+      
+
+</section>    
 
 
 

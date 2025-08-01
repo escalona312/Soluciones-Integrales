@@ -8,8 +8,26 @@
   <meta name="description" content="Portafolio completo de trabajos realizados por Soluciones Integrales en Angol. Instalaciones eléctricas, construcción, renovaciones y más proyectos." />
   <meta name="keywords" content="proyectos Angol, trabajos realizados, portafolio construcción, instalaciones eléctricas Angol, renovaciones" />
   <meta name="author" content="Soluciones Integrales" />
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="./dist/output.css" as="style" />
+  <link rel="preload" href="images/LOGO (1) (1).png" as="image" />
+  
+  <!-- DNS prefetch for external resources -->
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  
+  <!-- Critical CSS inline -->
+  <style>
+    /* Critical CSS for above-the-fold content */
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+    .header { background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 50; }
+    .hero-bg { background: linear-gradient(to right, #2563eb, #7c3aed); }
+    .proyecto-card { transition: all 0.3s ease; }
+    .proyecto-card:hover { transform: translateY(-5px); }
+  </style>
+  
   <link rel="stylesheet" href="./dist/output.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
 </head>
 
 <body class="bg-white text-gray-800 font-sans">
@@ -20,7 +38,7 @@
       <div class="flex items-center justify-between">
         <div class="flex items-center space-x-4">
           <a href="index.html" class="flex items-center space-x-2">
-            <img src="images/LOGO (1) (1).png" alt="Soluciones Integrales" class="h-12 w-auto" />
+            <img src="images/LOGO (1) (1).png" alt="Soluciones Integrales" class="h-12 w-auto" loading="eager" />
             <span class="text-xl font-bold text-gray-800">Soluciones Integrales</span>
           </a>
         </div>
@@ -667,150 +685,144 @@
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Optimized Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   
   <script>
-    // Inicializar Swiper
-    new Swiper('.mySwiper', {
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-    });
-
-    // Funcionalidad del menú móvil
+    // Critical JavaScript for mobile menu and basic functionality
     document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu functionality
       const menuToggle = document.getElementById('menu-toggle');
       const mobileMenu = document.getElementById('mobile-menu');
-      const hamburgerLines = menuToggle.querySelectorAll('span');
+      const hamburgerLines = menuToggle?.querySelectorAll('span');
 
-      menuToggle.addEventListener('click', function() {
-        // Toggle del menú
-        mobileMenu.classList.toggle('hidden');
-        
-        // Animación del botón hamburguesa
-        if (!mobileMenu.classList.contains('hidden')) {
-          // Menú abierto - animar a X
-          hamburgerLines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-          hamburgerLines[1].style.opacity = '0';
-          hamburgerLines[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-        } else {
-          // Menú cerrado - volver a hamburguesa
-          hamburgerLines[0].style.transform = 'rotate(0deg) translate(0, 0)';
-          hamburgerLines[1].style.opacity = '1';
-          hamburgerLines[2].style.transform = 'rotate(0deg) translate(0, 0)';
-        }
-      });
-
-      // Cerrar menú al hacer click en un enlace
-      const mobileLinks = mobileMenu.querySelectorAll('a');
-      mobileLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          mobileMenu.classList.add('hidden');
-          // Resetear animación del botón
-          hamburgerLines[0].style.transform = 'rotate(0deg) translate(0, 0)';
-          hamburgerLines[1].style.opacity = '1';
-          hamburgerLines[2].style.transform = 'rotate(0deg) translate(0, 0)';
+      if (menuToggle && mobileMenu && hamburgerLines) {
+        menuToggle.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+          
+          // Animate hamburger
+          if (!mobileMenu.classList.contains('hidden')) {
+            hamburgerLines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+            hamburgerLines[1].style.opacity = '0';
+            hamburgerLines[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+          } else {
+            hamburgerLines[0].style.transform = 'rotate(0deg) translate(0, 0)';
+            hamburgerLines[1].style.opacity = '1';
+            hamburgerLines[2].style.transform = 'rotate(0deg) translate(0, 0)';
+          }
         });
-      });
 
-      // Cerrar menú al redimensionar la ventana
-      window.addEventListener('resize', function() {
-        if (window.innerWidth >= 768) { // md breakpoint
-          mobileMenu.classList.add('hidden');
-          // Resetear animación del botón
-          hamburgerLines[0].style.transform = 'rotate(0deg) translate(0, 0)';
-          hamburgerLines[1].style.opacity = '1';
-          hamburgerLines[2].style.transform = 'rotate(0deg) translate(0, 0)';
-        }
-      });
-    });
-
-    // Función para filtrar proyectos
-    function filtrarProyectos(categoria) {
-      const proyectos = document.querySelectorAll('.proyecto-card');
-      const botones = document.querySelectorAll('.filtro-btn');
-      
-      // Remover clase active de todos los botones
-      botones.forEach(btn => {
-        btn.classList.remove('active', 'bg-blue-600', 'text-white');
-        btn.classList.add('bg-white', 'text-gray-700', 'border');
-      });
-      
-      // Agregar clase active al botón clickeado
-      event.target.classList.add('active', 'bg-blue-600', 'text-white');
-      event.target.classList.remove('bg-white', 'text-gray-700', 'border');
-      
-      // Mostrar/ocultar proyectos según categoría
-      proyectos.forEach(proyecto => {
-        if (categoria === 'todos' || proyecto.classList.contains(categoria)) {
-          proyecto.style.display = 'block';
-          proyecto.style.animation = 'fadeIn 0.5s ease-in';
-        } else {
-          proyecto.style.display = 'none';
-        }
-      });
-    }
-
-    // Animación de entrada
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.proyecto-card').forEach(card => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(20px)';
-      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(card);
-    });
-
-    // Funciones para el modal de casas
-    function abrirModalCasas() {
-      const modal = document.getElementById('modalCasas');
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden'; // Prevenir scroll del body
-    }
-
-    function cerrarModalCasas() {
-      const modal = document.getElementById('modalCasas');
-      modal.classList.add('hidden');
-      document.body.style.overflow = 'auto'; // Restaurar scroll del body
-    }
-
-    // Cerrar modal al hacer click fuera de él
-    document.getElementById('modalCasas').addEventListener('click', function(e) {
-      if (e.target === this) {
-        cerrarModalCasas();
+        // Close menu when clicking links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            hamburgerLines[0].style.transform = 'rotate(0deg) translate(0, 0)';
+            hamburgerLines[1].style.opacity = '1';
+            hamburgerLines[2].style.transform = 'rotate(0deg) translate(0, 0)';
+          });
+        });
       }
+
+      // Initialize Swiper when available
+      if (typeof Swiper !== 'undefined') {
+        new Swiper('.mySwiper', {
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+          },
+        });
+      }
+
+      // Función para filtrar proyectos
+      window.filtrarProyectos = function(categoria) {
+        const proyectos = document.querySelectorAll('.proyecto-card');
+        const botones = document.querySelectorAll('.filtro-btn');
+        
+        // Remover clase active de todos los botones
+        botones.forEach(btn => {
+          btn.classList.remove('active', 'bg-blue-600', 'text-white');
+          btn.classList.add('bg-white', 'text-gray-700', 'border');
+        });
+        
+        // Agregar clase active al botón clickeado
+        event.target.classList.add('active', 'bg-blue-600', 'text-white');
+        event.target.classList.remove('bg-white', 'text-gray-700', 'border');
+        
+        // Mostrar/ocultar proyectos según categoría
+        proyectos.forEach(proyecto => {
+          if (categoria === 'todos' || proyecto.classList.contains(categoria)) {
+            proyecto.style.display = 'block';
+            proyecto.style.animation = 'fadeIn 0.5s ease-in';
+          } else {
+            proyecto.style.display = 'none';
+          }
+        });
+      }
+
+      // Animación de entrada para las tarjetas de proyectos
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.proyecto-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+      });
+
+      // Funciones para el modal de casas
+      window.abrirModalCasas = function() {
+        const modal = document.getElementById('modalCasas');
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+      }
+
+      window.cerrarModalCasas = function() {
+        const modal = document.getElementById('modalCasas');
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto'; // Restaurar scroll del body
+      }
+
+      // Cerrar modal al hacer click fuera de él
+      const modalCasas = document.getElementById('modalCasas');
+      if (modalCasas) {
+        modalCasas.addEventListener('click', function(e) {
+          if (e.target === this) {
+            window.cerrarModalCasas();
+          }
+        });
+      }
+
+      // Cerrar modal con la tecla Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          window.cerrarModalCasas();
+        }
+      });
     });
 
-    // Cerrar modal con la tecla Escape
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        cerrarModalCasas();
-      }
-    });
   </script>
 
   <style>

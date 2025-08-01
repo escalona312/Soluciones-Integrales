@@ -22,6 +22,15 @@
   <meta name="twitter:image" content="https://solucionesintegralesangol.cl/images/LOGO%20(1)%20(1).png" />
   <link rel="canonical" href="https://solucionesintegralesangol.cl/" />
   
+  <!-- Preload critical resources -->
+  <link rel="preload" href="./dist/output.css" as="style" />
+  <link rel="preload" href="images/LOGO (1) (1).png" as="image" />
+  <link rel="preload" href="images/pexels-pixabay-257736.jpg" as="image" />
+  
+  <!-- DNS prefetch for external resources -->
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  
   <!-- Structured Data for Local Business -->
   <script type="application/ld+json">
   {
@@ -81,22 +90,33 @@
   }
   </script>
   
+  <!-- Critical CSS inline -->
+  <style>
+    /* Critical CSS for above-the-fold content */
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+    .hero-section { min-height: 100vh; display: flex; align-items: center; background-size: cover; background-position: center; }
+    .hero-content { position: relative; z-index: 10; }
+    .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+    .btn-primary { background: #2563eb; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block; }
+    .btn-primary:hover { background: #1d4ed8; }
+  </style>
+  
   <link rel="stylesheet" href="./dist/output.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
 
 </head>
 
 <body class="bg-white text-gray-800 font-sans">
 
 
-<section class="relative min-h-screen flex items-center bg-cover bg-center"
+<section class="relative min-h-screen flex items-center bg-cover bg-center hero-section"
     style="background-image: url('images/pexels-pixabay-257736.jpg');">
 
     <!-- Capa oscura -->
-    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 bg-black/50 hero-overlay"></div>
 
     <!-- Contenido del hero -->
-    <div class="relative max-w-7xl mx-auto px-6 py-16 flex flex-col-reverse lg:flex-row items-center gap-12 z-10">
+    <div class="relative max-w-7xl mx-auto px-6 py-16 flex flex-col-reverse lg:flex-row items-center gap-12 z-10 hero-content">
 
       <!-- Columna izquierda: Texto sin fondo -->
       <div class="lg:w-1/2 text-white animate-fade-in-up space-y-6">
@@ -910,6 +930,51 @@
     </div>
   </div>
 </footer>
+
+<!-- Optimized JavaScript loading -->
+<script>
+  // Inline critical JavaScript
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+        // Animate hamburger
+        const spans = this.querySelectorAll('span');
+        spans.forEach(span => span.classList.toggle('rotate-45'));
+      });
+    }
+  });
+</script>
+
+<!-- Load non-critical JavaScript asynchronously -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script>
+  // Initialize Swiper when DOM is ready
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof Swiper !== 'undefined') {
+      new Swiper('.swiper', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      });
+    }
+  });
+</script>
+
 </body>
 
 </html>

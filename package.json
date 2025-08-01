@@ -1,19 +1,30 @@
 {
-  "name": "demo-contru",
+  "name": "soluciones-integrales-landing",
   "version": "1.0.0",
-  "description": "Sitio web de construcción en Angol",
+  "description": "Landing page para Soluciones Integrales - Constructor profesional en Angol",
   "main": "index.html",
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "build:prod": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "optimize-images": "node scripts/optimize-images.js",
+    "compress": "gzip -k dist/output.css",
+    "build-prod": "npm run build && npm run compress"
   },
-  "keywords": ["construcción", "Angol", "Tailwind CSS"],
+  "keywords": [
+    "construccion",
+    "angol",
+    "landing-page",
+    "tailwindcss"
+  ],
   "author": "Soluciones Integrales",
   "license": "MIT",
   "devDependencies": {
     "tailwindcss": "^3.4.0",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32"
+  },
+  "dependencies": {
+    "swiper": "^11.0.5"
   }
 } 

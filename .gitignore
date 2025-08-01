@@ -5,7 +5,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Build outputs
-dist/
+# dist/  # Comentado para permitir que se suba a GitHub Pages
 build/
 
 # Environment variables

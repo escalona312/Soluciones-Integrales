@@ -4,8 +4,9 @@
   "description": "Sitio web de construcción en Angol",
   "main": "index.html",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build:prod": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "build:prod": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },
   "keywords": ["construcción", "Angol", "Tailwind CSS"],
   "author": "Soluciones Integrales",

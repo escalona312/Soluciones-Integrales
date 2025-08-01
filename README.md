@@ -35,16 +35,39 @@ Sitio web profesional para servicios de construcción en Angol, Chile.
 
 ```
 DemoContru/
-├── src/
-│   └── input.css          # Archivo CSS de entrada con directivas de Tailwind
-├── dist/
-│   └── output.css         # CSS compilado de Tailwind (generado automáticamente)
-├── index.html             # Página principal
-├── trabajos.html          # Página de trabajos
-├── tailwind.config.js     # Configuración de Tailwind CSS
-├── postcss.config.js      # Configuración de PostCSS
-├── package.json           # Dependencias y scripts
-└── README.md             # Este archivo
+├── 📄 Archivos principales
+│   ├── index.html             # Página principal
+│   ├── trabajos.html          # Página de trabajos
+│   ├── package.json           # Dependencias y scripts
+│   ├── package-lock.json      # Lock de dependencias
+│   └── README.md             # Documentación
+│
+       ├── 📄 Archivos de configuración
+       │   ├── tailwind.config.js     # Configuración de Tailwind CSS
+       │   └── postcss.config.js      # Configuración de PostCSS
+│
+├── 📁 src/                   # Código fuente
+│   └── input.css             # Archivo CSS de entrada con directivas de Tailwind
+│
+├── 📁 dist/                  # Archivos compilados
+│   └── output.css            # CSS compilado de Tailwind (generado automáticamente)
+│
+├── 📁 images/                # Imágenes del sitio
+│   ├── *.png                 # Imágenes PNG
+│   └── *.jpg                 # Imágenes JPG
+│
+├── 📁 icons/                 # Iconos SVG
+│   └── *.svg                 # Iconos del sitio
+│
+├── 📁 galeria/               # Galería de trabajos
+│   ├── empaste,yeso y pintura/
+│   ├── Postacion y cableado aéreo para instalaciones ele trica domiciliarias/
+│   └── WhatsApp Unknown 2025-07-31 at 3.01.54 AM/
+│
+├── 📁 assets/                # Recursos multimedia
+│   └── videos/               # Videos del sitio
+│
+└── 📁 node_modules/          # Dependencias de Node.js
 ```
 
 ## 🎨 Personalización de Tailwind

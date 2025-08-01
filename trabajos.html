@@ -8,7 +8,7 @@
   <meta name="description" content="Portafolio completo de trabajos realizados por Soluciones Integrales en Angol. Instalaciones eléctricas, construcción, renovaciones y más proyectos." />
   <meta name="keywords" content="proyectos Angol, trabajos realizados, portafolio construcción, instalaciones eléctricas Angol, renovaciones" />
   <meta name="author" content="Soluciones Integrales" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./dist/output.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
@@ -20,7 +20,7 @@
       <div class="flex items-center justify-between">
         <div class="flex items-center space-x-4">
           <a href="index.html" class="flex items-center space-x-2">
-            <img src="LOGO (1) (1).png" alt="Soluciones Integrales" class="h-12 w-auto" />
+            <img src="images/LOGO (1) (1).png" alt="Soluciones Integrales" class="h-12 w-auto" />
             <span class="text-xl font-bold text-gray-800">Soluciones Integrales</span>
           </a>
         </div>
@@ -89,9 +89,14 @@
         <button onclick="filtrarProyectos('pintura')" class="filtro-btn px-6 py-3 bg-white text-gray-700 rounded-full hover:bg-gray-100 transition border">
           Pintura
         </button>
+        <button onclick="filtrarProyectos('mantenimiento')" class="filtro-btn px-6 py-3 bg-white text-gray-700 rounded-full hover:bg-gray-100 transition border">
+          Mantenimiento
+        </button>
+        <button onclick="filtrarProyectos('casas')" class="filtro-btn px-6 py-3 bg-white text-gray-700 rounded-full hover:bg-gray-100 transition border">
+          Casas
+        </button>
       </div>
-    </div>
-  </section>
+
 
   <!-- Grid de proyectos -->
   <section class="py-20 bg-white">
@@ -102,8 +107,8 @@
         <div class="proyecto-card electricidad bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
           <div class="swiper mySwiper relative">
             <div class="swiper-wrapper">
-              <img src="Tableroelectronico.png" class="swiper-slide w-full h-56 object-cover" alt="Tablero eléctrico actualizado">
-              <img src="tableroelectronico2.png" class="swiper-slide w-full h-56 object-cover" alt="Instalación de protecciones">
+              <img src="images/Tableroelectronico.png" class="swiper-slide w-full h-56 object-cover" alt="Tablero eléctrico actualizado">
+              <img src="images/tableroelectronico2.png" class="swiper-slide w-full h-56 object-cover" alt="Instalación de protecciones">
             </div>
             <div class="swiper-pagination !bottom-2"></div>
             <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
@@ -132,8 +137,8 @@
         <div class="proyecto-card pintura bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
           <div class="swiper mySwiper relative">
             <div class="swiper-wrapper">
-              <img src="Pintura.png" class="swiper-slide w-full h-56 object-cover" alt="Aplicación de esmalte">
-              <img src="Pintura2.png" class="swiper-slide w-full h-56 object-cover" alt="Acabado final">
+              <img src="images/Pintura.png" class="swiper-slide w-full h-56 object-cover" alt="Aplicación de esmalte">
+              <img src="images/Pintura2.png" class="swiper-slide w-full h-56 object-cover" alt="Acabado final">
             </div>
             <div class="swiper-pagination !bottom-2"></div>
             <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
@@ -162,9 +167,9 @@
         <div class="proyecto-card renovacion bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
           <div class="swiper mySwiper relative">
             <div class="swiper-wrapper">
-              <img src="alisaryeso.png" class="swiper-slide w-full h-56 object-cover" alt="Proceso de alisado">
-              <img src="alisaryeso2.png" class="swiper-slide w-full h-56 object-cover" alt="Muro preparado">
-              <img src="image.png" class="swiper-slide w-full h-56 object-cover" alt="Acabado final">
+              <img src="images/alisaryeso.png" class="swiper-slide w-full h-56 object-cover" alt="Proceso de alisado">
+              <img src="images/alisaryeso2.png" class="swiper-slide w-full h-56 object-cover" alt="Muro preparado">
+              <img src="images/image.png" class="swiper-slide w-full h-56 object-cover" alt="Acabado final">
             </div>
             <div class="swiper-pagination !bottom-2"></div>
             <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
@@ -193,10 +198,10 @@
         <div class="proyecto-card electricidad bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
           <div class="swiper mySwiper relative">
             <div class="swiper-wrapper">
-              <img src="WhatsApp Unknown 2025-07-31 at 3.01.54 AM/WhatsApp Image 2025-07-31 at 12.51.08 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Tablero industrial 1">
-              <img src="WhatsApp Unknown 2025-07-31 at 3.01.54 AM/WhatsApp Image 2025-07-31 at 12.51.08 AM (2).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Tablero industrial 2">
-              <img src="WhatsApp Unknown 2025-07-31 at 3.01.54 AM/WhatsApp Image 2025-07-31 at 12.51.08 AM (3).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Tablero industrial 3">
-              <img src="WhatsApp Unknown 2025-07-31 at 3.01.54 AM/WhatsApp Image 2025-07-31 at 12.51.08 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Tablero industrial 4">
+              <img src="galeria/WhatsApp Unknown 2025-07-31 at 3.01.54 AM/WhatsApp Image 2025-07-31 at 12.51.08 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Tablero industrial 1">
+              <img src="galeria/WhatsApp Unknown 2025-07-31 at 3.01.54 AM/WhatsApp Image 2025-07-31 at 12.51.08 AM (2).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Tablero industrial 2">
+              <img src="galeria/WhatsApp Unknown 2025-07-31 at 3.01.54 AM/WhatsApp Image 2025-07-31 at 12.51.08 AM (3).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Tablero industrial 3">
+              <img src="galeria/WhatsApp Unknown 2025-07-31 at 3.01.54 AM/WhatsApp Image 2025-07-31 at 12.51.08 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Tablero industrial 4">
             </div>
             <div class="swiper-pagination !bottom-2"></div>
             <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
@@ -227,8 +232,8 @@
         <div class="proyecto-card electricidad bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
           <div class="swiper mySwiper relative">
             <div class="swiper-wrapper">
-              <img src="Postacion y cableado aéreo para instalaciones ele trica domiciliarias/WhatsApp Image 2025-07-31 at 12.50.04 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Instalación de postación eléctrica">
-              <img src="Postacion y cableado aéreo para instalaciones ele trica domiciliarias/WhatsApp Image 2025-07-31 at 12.50.04 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Cableado aéreo domiciliario">
+              <img src="galeria/Postacion y cableado aéreo para instalaciones ele trica domiciliarias/WhatsApp Image 2025-07-31 at 12.50.04 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Instalación de postación eléctrica">
+              <img src="galeria/Postacion y cableado aéreo para instalaciones ele trica domiciliarias/WhatsApp Image 2025-07-31 at 12.50.04 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Cableado aéreo domiciliario">
             </div>
             <div class="swiper-pagination !bottom-2"></div>
             <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
@@ -257,17 +262,17 @@
         <div class="proyecto-card renovacion bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
           <div class="swiper mySwiper relative">
             <div class="swiper-wrapper">
-              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.43 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Proceso de empaste y preparación">
-              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.43 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Aplicación de yeso">
-              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.43 AM (2).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Trabajo de alisado">
-              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Preparación para pintura">
-              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Aplicación de pintura">
-              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM (2).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Acabado final">
-              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM (3).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Resultado final">
-              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM (4).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Detalle del acabado">
-              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.45 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Vista general del proyecto">
-              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.45 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Detalle de la pintura">
-              <img src="empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.45 AM (2).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Resultado completo">
+              <img src="galeria/empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.43 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Proceso de empaste y preparación">
+              <img src="galeria/empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.43 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Aplicación de yeso">
+              <img src="galeria/empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.43 AM (2).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Trabajo de alisado">
+              <img src="galeria/empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Preparación para pintura">
+              <img src="galeria/empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Aplicación de pintura">
+              <img src="galeria/empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM (2).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Acabado final">
+              <img src="galeria/empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM (3).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Resultado final">
+              <img src="galeria/empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.44 AM (4).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Detalle del acabado">
+              <img src="galeria/empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.45 AM.jpeg" class="swiper-slide w-full h-56 object-cover" alt="Vista general del proyecto">
+              <img src="galeria/empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.45 AM (1).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Detalle de la pintura">
+              <img src="galeria/empaste,yeso y pintura/WhatsApp Image 2025-07-31 at 12.51.45 AM (2).jpeg" class="swiper-slide w-full h-56 object-cover" alt="Resultado completo">
             </div>
             <div class="swiper-pagination !bottom-2"></div>
             <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
@@ -288,6 +293,174 @@
                 <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
               </svg>
               Angol, Araucanía
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 9: Pintura Especial CESFAM -->
+        <div class="proyecto-card pintura bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="swiper mySwiper relative">
+            <div class="swiper-wrapper">
+              <img src="galeria/Aplicación de pintura especial en salas de atención a público  cesfam piedra del águila/pintura-especial-cesfam-1.webp" class="swiper-slide w-full h-56 object-cover" alt="Aplicación de pintura especial en salas CESFAM">
+              <img src="galeria/Aplicación de pintura especial en salas de atención a público  cesfam piedra del águila/pintura-especial-cesfam-2.webp" class="swiper-slide w-full h-56 object-cover" alt="Proceso de pintura especial">
+              <img src="galeria/Aplicación de pintura especial en salas de atención a público  cesfam piedra del águila/pintura-especial-cesfam-3.webp" class="swiper-slide w-full h-56 object-cover" alt="Acabado de pintura especial">
+              <img src="galeria/Aplicación de pintura especial en salas de atención a público  cesfam piedra del águila/pintura-especial-cesfam-4.webp" class="swiper-slide w-full h-56 object-cover" alt="Resultado final pintura especial">
+              <img src="galeria/Aplicación de pintura especial en salas de atención a público  cesfam piedra del águila/pintura-especial-cesfam-5.webp" class="swiper-slide w-full h-56 object-cover" alt="Detalle del acabado especial">
+            </div>
+            <div class="swiper-pagination !bottom-2"></div>
+            <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+            <div class="swiper-button-next !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full">Pintura Especial</span>
+              <span class="text-xs text-gray-500">2024</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-800 mb-2">Pintura Especial CESFAM Piedra del Águila</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Aplicación de pintura especial en salas de atención a público del CESFAM Piedra del Águila. 
+              Trabajo realizado con materiales de alta calidad y técnicas especializadas para espacios de salud pública.
+            </p>
+            <div class="flex items-center text-sm text-gray-500">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              Piedra del Águila, Araucanía
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 10: Reparación Sala CESFAM Retiro -->
+        <div class="proyecto-card construccion bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="swiper mySwiper relative">
+            <div class="swiper-wrapper">
+              <img src="galeria/Reparación sala atención cesfam Retiro/reparacion-cesfam-retiro-1.webp" class="swiper-slide w-full h-56 object-cover" alt="Reparación sala atención CESFAM Retiro">
+              <img src="galeria/Reparación sala atención cesfam Retiro/reparacion-cesfam-retiro-2.webp" class="swiper-slide w-full h-56 object-cover" alt="Proceso de reparación">
+              <img src="galeria/Reparación sala atención cesfam Retiro/reparacion-cesfam-retiro-3.webp" class="swiper-slide w-full h-56 object-cover" alt="Trabajos de construcción">
+              <img src="galeria/Reparación sala atención cesfam Retiro/reparacion-cesfam-retiro-4.webp" class="swiper-slide w-full h-56 object-cover" alt="Resultado final reparación">
+            </div>
+            <div class="swiper-pagination !bottom-2"></div>
+            <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+            <div class="swiper-button-next !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-purple-100 text-purple-800 text-xs font-medium px-3 py-1 rounded-full">Construcción</span>
+              <span class="text-xs text-gray-500">2024</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-800 mb-2">Reparación Sala de Atención CESFAM Retiro</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Trabajos de reparación y mantenimiento en sala de atención del CESFAM Retiro. 
+              Servicios de construcción y reparación especializada para centros de salud pública.
+            </p>
+            <div class="flex items-center text-sm text-gray-500">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              Retiro, Araucanía
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 11: Limpieza y Mantención Municipalidad Angol -->
+        <div class="proyecto-card mantenimiento bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="swiper mySwiper relative">
+            <div class="swiper-wrapper">
+              <img src="galeria/Limpieza y mantencion combustiones lentas Municipalidad Angol/limpieza-mantencion-angol-1.webp" class="swiper-slide w-full h-56 object-cover" alt="Limpieza y mantención combustiones lentas">
+              <img src="galeria/Limpieza y mantencion combustiones lentas Municipalidad Angol/limpieza-mantencion-angol-2.webp" class="swiper-slide w-full h-56 object-cover" alt="Proceso de limpieza">
+              <img src="galeria/Limpieza y mantencion combustiones lentas Municipalidad Angol/limpieza-mantencion-angol-3.webp" class="swiper-slide w-full h-56 object-cover" alt="Mantención de equipos">
+            </div>
+            <div class="swiper-pagination !bottom-2"></div>
+            <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+            <div class="swiper-button-next !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-3 py-1 rounded-full">Mantenimiento</span>
+              <span class="text-xs text-gray-500">2024</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-800 mb-2">Limpieza y Mantención Combustiones Lentas</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Servicios de limpieza y mantención de equipos de combustión lenta para la Municipalidad de Angol. 
+              Trabajos especializados en sistemas de calefacción y equipos municipales.
+            </p>
+            <div class="flex items-center text-sm text-gray-500">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              Angol, Araucanía
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 12: Canalización Eléctrica en Tabiques de Madera -->
+        <div class="proyecto-card electricidad bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="swiper mySwiper relative">
+            <div class="swiper-wrapper">
+              <img src="galeria/Canalización eléctrica en tabiques de madera/canalizacion-electrica-tabiques-2.webp" class="swiper-slide w-full h-56 object-cover" alt="Proceso de instalación eléctrica">
+              <img src="galeria/Canalización eléctrica en tabiques de madera/canalizacion-electrica-tabiques-3.webp" class="swiper-slide w-full h-56 object-cover" alt="Trabajos de canalización">
+              <img src="galeria/Canalización eléctrica en tabiques de madera/canalizacion-electrica-tabiques-4.jpg" class="swiper-slide w-full h-56 object-cover" alt="Acabado final instalación">
+            </div>
+            <div class="swiper-pagination !bottom-2"></div>
+            <div class="swiper-button-prev !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+            <div class="swiper-button-next !text-blue-700 !w-8 !h-8 !rounded-full !bg-white/70 hover:!bg-white !shadow"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Electricidad</span>
+              <span class="text-xs text-gray-500">2024</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-800 mb-2">Canalización Eléctrica en Tabiques de Madera</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Instalación de canalización eléctrica especializada en tabiques de madera. 
+              Trabajo realizado con técnicas profesionales para garantizar seguridad y cumplimiento de normativas eléctricas.
+            </p>
+            <div class="flex items-center text-sm text-gray-500">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              Angol, Araucanía
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 13: Construcción de Casas -->
+        <div class="proyecto-card construccion casas bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="relative">
+            <img src="images/pexels-pixabay-257736.jpg" class="w-full h-56 object-cover" alt="Construcción de casas">
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+              <button onclick="abrirModalCasas()" class="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg">
+                Ver Galería Completa
+              </button>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-purple-100 text-purple-800 text-xs font-medium px-3 py-1 rounded-full">Construcción</span>
+              <span class="text-xs text-gray-500">2024</span>
+            </div>
+            <h3 class="font-bold text-xl text-gray-800 mb-2">Construcción de Casas</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Especialistas en construcción de casas de diferentes tipos y estilos. 
+              Desde casas modulares hasta construcciones tradicionales, ofrecemos soluciones integrales.
+            </p>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center text-sm text-gray-500">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+                Angol, Araucanía
+              </div>
+              <button onclick="abrirModalCasas()" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                Ver más →
+              </button>
+            </div>
+            <div class="flex gap-2">
+              <a href="https://wa.me/56935172731?text=Hola,%20me%20interesa%20la%20construcción%20de%20casas.%20¿Podrían%20cotizar%20mi%20proyecto?" 
+                 target="_blank"
+                 class="flex-1 bg-green-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-green-700 transition text-center">
+                Cotizar Casa
+              </a>
             </div>
           </div>
         </div>
@@ -331,7 +504,7 @@
       <div class="grid md:grid-cols-3 gap-8">
         <div>
           <div class="flex items-center space-x-2 mb-4">
-            <img src="LOGO (1) (1).png" alt="Soluciones Integrales" class="h-10 w-auto" />
+            <img src="images/LOGO (1) (1).png" alt="Soluciones Integrales" class="h-10 w-auto" />
             <span class="text-xl font-bold">Soluciones Integrales</span>
           </div>
           <p class="text-gray-400">
@@ -370,6 +543,129 @@
       <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.58-1.452L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.267.655 4.398 1.908 6.161l-1.317 4.814 4.893-1.292z" />
     </svg>
   </a>
+
+  <!-- Modal Galería de Casas -->
+  <div id="modalCasas" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+      <!-- Header del Modal -->
+      <div class="flex items-center justify-between p-6 border-b border-gray-200">
+        <div>
+          <h2 class="text-2xl font-bold text-gray-800">Galería de Construcción de Casas</h2>
+          <p class="text-gray-600 mt-1">Diferentes tipos y estilos de construcción</p>
+        </div>
+        <button onclick="cerrarModalCasas()" class="text-gray-400 hover:text-gray-600 transition">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Contenido del Modal -->
+      <div class="p-6">
+        <!-- Tipos de Casas -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <!-- Casa Modular -->
+          <div class="bg-gray-50 rounded-lg p-4">
+            <h3 class="font-bold text-lg text-gray-800 mb-2">Casas Modulares</h3>
+            <p class="text-gray-600 text-sm mb-3">
+              Construcción rápida y eficiente con módulos prefabricados de alta calidad.
+            </p>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Tiempo de construcción reducido</li>
+              <li>• Costos optimizados</li>
+              <li>• Calidad garantizada</li>
+            </ul>
+          </div>
+
+          <!-- Casa Tradicional -->
+          <div class="bg-gray-50 rounded-lg p-4">
+            <h3 class="font-bold text-lg text-gray-800 mb-2">Casas Tradicionales</h3>
+            <p class="text-gray-600 text-sm mb-3">
+              Construcción sólida con materiales tradicionales y técnicas probadas.
+            </p>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Durabilidad excepcional</li>
+              <li>• Diseño personalizado</li>
+              <li>• Valor a largo plazo</li>
+            </ul>
+          </div>
+
+          <!-- Casa Económica -->
+          <div class="bg-gray-50 rounded-lg p-4">
+            <h3 class="font-bold text-lg text-gray-800 mb-2">Casas Económicas</h3>
+            <p class="text-gray-600 text-sm mb-3">
+              Soluciones accesibles sin comprometer calidad y funcionalidad.
+            </p>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Precios accesibles</li>
+              <li>• Diseño funcional</li>
+              <li>• Materiales de calidad</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Galería de Fotos -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Galería de Proyectos</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Imágenes reales de casas modulares -->
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+              <img src="galeria/Casas/casa-modular-1.webp" alt="Casa Modular 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+              <img src="galeria/Casas/casa-modular-2.webp" alt="Casa Modular 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+              <img src="galeria/Casas/casa-modular-3.webp" alt="Casa Modular 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+              <img src="galeria/Casas/casa-modular-4.webp" alt="Casa Modular 4" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+              <img src="galeria/Casas/casa-modular-5.webp" alt="Casa Modular 5" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+              <img src="galeria/Casas/casa-modular-6.webp" alt="Casa Modular 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+              <img src="galeria/Casas/casa-modular-7.webp" alt="Casa Modular 7" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+              <img src="galeria/Casas/casa-modular-8.webp" alt="Casa Modular 8" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+              <img src="galeria/Casas/casa-modular-9.webp" alt="Casa Modular 9" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+              <img src="galeria/Casas/casa-modular-10.webp" alt="Casa Modular 10" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+          </div>
+        </div>
+
+        <!-- Información de Contacto -->
+        <div class="bg-blue-50 rounded-lg p-6">
+          <h3 class="font-bold text-lg text-gray-800 mb-3">¿Interesado en construir tu casa?</h3>
+          <p class="text-gray-600 mb-4">
+            Contáctanos para una consulta gratuita y cotización personalizada según tus necesidades.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="https://wa.me/56935172731?text=Hola,%20me%20interesa%20construir%20una%20casa,%20quisiera%20cotizar" 
+               target="_blank"
+               class="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.58-1.452L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.267.655 4.398 1.908 6.161l-1.317 4.814 4.893-1.292z"/>
+              </svg>
+              Cotizar por WhatsApp
+            </a>
+            <button onclick="cerrarModalCasas()" 
+                    class="inline-flex items-center justify-center px-6 py-3 bg-gray-600 text-white font-semibold rounded-full hover:bg-gray-700 transition">
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -487,6 +783,33 @@
       card.style.transform = 'translateY(20px)';
       card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(card);
+    });
+
+    // Funciones para el modal de casas
+    function abrirModalCasas() {
+      const modal = document.getElementById('modalCasas');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+    }
+
+    function cerrarModalCasas() {
+      const modal = document.getElementById('modalCasas');
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto'; // Restaurar scroll del body
+    }
+
+    // Cerrar modal al hacer click fuera de él
+    document.getElementById('modalCasas').addEventListener('click', function(e) {
+      if (e.target === this) {
+        cerrarModalCasas();
+      }
+    });
+
+    // Cerrar modal con la tecla Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        cerrarModalCasas();
+      }
     });
   </script>
 

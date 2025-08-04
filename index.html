@@ -179,6 +179,46 @@
   .animate-fade-in-up {
     animation: fade-in-up 1.2s ease-out forwards;
   }
+
+  /* Estilos específicos para el carrusel de clientes en móvil */
+  .clientesSwiper {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .clientesSwiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 180px;
+  }
+
+  .clientesSwiper .swiper-slide > div {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  /* Ocultar navegación en móviles pequeños */
+  .clientesSwiper .swiper-button-next,
+  .clientesSwiper .swiper-button-prev {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .clientesSwiper .swiper-button-next,
+    .clientesSwiper .swiper-button-prev {
+      display: flex;
+    }
+  }
+
+  /* Asegurar que las imágenes se mantengan centradas */
+  .clientesSwiper .swiper-slide img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 </style>
 
 
@@ -801,11 +841,11 @@
       },
     });
 
-    // Carrusel de clientes con configuración responsiva
+    // Carrusel de clientes con configuración responsiva optimizada para móvil
     new Swiper('.clientesSwiper', {
       loop: true,
-      slidesPerView: 1.5,
-      spaceBetween: 20,
+      slidesPerView: 1,
+      spaceBetween: 15,
       centeredSlides: true,
       autoplay: {
         delay: 3000,
@@ -816,6 +856,11 @@
         prevEl: '.swiper-button-prev',
       },
       breakpoints: {
+        480: {
+          slidesPerView: 1.5,
+          spaceBetween: 20,
+          centeredSlides: true,
+        },
         640: {
           slidesPerView: 2.5,
           spaceBetween: 30,

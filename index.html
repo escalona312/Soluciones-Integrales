@@ -30,7 +30,9 @@
   <!-- DNS prefetch for external resources -->
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  
+  <!-- SwiperJS CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <!-- Structured Data for Local Business -->
   <script type="application/ld+json">
   {
@@ -326,43 +328,65 @@
     <!-- Línea decorativa -->
     <div class="w-24 h-1 bg-teal-500 mx-auto mb-12"></div>
 
-    <!-- Grid de logos de clientes -->
-    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-center justify-items-center">
+    <!-- Carrusel de logos de clientes -->
+    <div class="swiper clientesSwiper">
+      <div class="swiper-wrapper">
 
-      <!-- Ilustre Municipalidad de Angol -->
-      <div class="flex flex-col items-center space-y-3 p-4 hover:scale-105 transition-transform duration-300">
-        <div class="w-32 h-32 md:w-40 md:h-40 lg:w-40 lg:h-40 bg-white rounded-lg shadow-md flex items-center justify-center p-4">
-          <img src="icons/logo_angol-300x118.png" alt="Ilustre Municipalidad de Angol" class="w-full h-full object-contain">
+        <!-- Ilustre Municipalidad de Angol -->
+        <div class="swiper-slide">
+          <div class="flex flex-col items-center space-y-3 p-4 hover:scale-105 transition-transform duration-300">
+            <div class="w-32 h-32 md:w-40 md:h-40 lg:w-40 lg:h-40 bg-white rounded-lg shadow-md flex items-center justify-center p-4">
+              <img src="icons/logo_angol-300x118.png" alt="Ilustre Municipalidad de Angol" class="w-full h-full object-contain">
+            </div>
+            <span class="text-sm text-gray-600 text-center">Entidad Municipal</span>
+          </div>
         </div>
-        <span class="text-sm text-gray-600 text-center">Entidad Municipal</span>
-      </div>
 
-      <!-- Liceos -->
-      <div class="flex flex-col items-center space-y-3 p-4 hover:scale-105 transition-transform duration-300">
-        <div class="w-32 h-32 md:w-40 md:h-40 lg:w-40 lg:h-40 bg-white rounded-lg shadow-md flex items-center justify-center p-4">
-          <img src="icons/Logo_del_Ministerio_de_Educación_Chile1.jpg" alt="Liceos" class="w-full h-full object-contain">
+        <!-- Liceos -->
+        <div class="swiper-slide">
+          <div class="flex flex-col items-center space-y-3 p-4 hover:scale-105 transition-transform duration-300">
+            <div class="w-32 h-32 md:w-40 md:h-40 lg:w-40 lg:h-40 bg-white rounded-lg shadow-md flex items-center justify-center p-4">
+              <img src="icons/Logo_del_Ministerio_de_Educación_Chile1.jpg" alt="Liceos" class="w-full h-full object-contain">
+            </div>
+            <span class="text-sm text-gray-600 text-center">Establecimientos Educacionales</span>
+          </div>
         </div>
-        <span class="text-sm text-gray-600 text-center">Establecimientos Educacionales</span>
-      </div>
 
-      <!-- Recintos Militares -->
-      <div class="flex flex-col items-center space-y-3 p-4 hover:scale-105 transition-transform duration-300">
-        <div class="w-32 h-32 md:w-40 md:h-40 lg:w-40 lg:h-40 bg-white rounded-lg shadow-md flex items-center justify-center p-4">
-          <img src="icons/Coat_of_arms_of_the_Chilean_Army.svg.png" alt="Recintos Militares" class="w-full h-full object-contain">
+        <!-- Recintos Militares -->
+        <div class="swiper-slide">
+          <div class="flex flex-col items-center space-y-3 p-4 hover:scale-105 transition-transform duration-300">
+            <div class="w-32 h-32 md:w-40 md:h-40 lg:w-40 lg:h-40 bg-white rounded-lg shadow-md flex items-center justify-center p-4">
+              <img src="icons/Coat_of_arms_of_the_Chilean_Army.svg.png" alt="Recintos Militares" class="w-full h-full object-contain">
+            </div>
+            <span class="text-sm text-gray-600 text-center">Recintos Militares</span>
+          </div>
         </div>
-        <span class="text-sm text-gray-600 text-center">Recintos Militares</span>
-      </div>
 
-      <!-- Hospitales -->
-      <div class="flex flex-col items-center space-y-3 p-4 hover:scale-105 transition-transform duration-300">
-        <div class="w-32 h-32 md:w-40 md:h-40 lg:w-40 lg:h-40 bg-white rounded-lg shadow-md flex items-center justify-center p-4">
-          <img src="icons/logosalud.jpg" alt="Hospitales" class="w-full h-full object-contain">
+        <!-- Hospitales -->
+        <div class="swiper-slide">
+          <div class="flex flex-col items-center space-y-3 p-4 hover:scale-105 transition-transform duration-300">
+            <div class="w-32 h-32 md:w-40 md:h-40 lg:w-40 lg:h-40 bg-white rounded-lg shadow-md flex items-center justify-center p-4">
+              <img src="icons/logosalud.jpg" alt="Hospitales" class="w-full h-full object-contain">
+            </div>
+            <span class="text-sm text-gray-600 text-center">Hospitales</span>
+          </div>
         </div>
-        <span class="text-sm text-gray-600 text-center">Hospitales</span>
-      </div>
 
+        <!-- Nuevo Cliente -->
+        <div class="swiper-slide">
+          <div class="flex flex-col items-center space-y-3 p-4 hover:scale-105 transition-transform duration-300">
+            <div class="w-32 h-32 md:w-40 md:h-40 lg:w-40 lg:h-40 bg-white rounded-lg shadow-md flex items-center justify-center p-4">
+              <img src="icons/logo_unico_fb.jpg" alt="Nuevo Cliente" class="w-full h-full object-contain">
+            </div>
+            <span class="text-sm text-gray-600 text-center">Cliente Corporativo</span>
+          </div>
+        </div>
+
+      </div>
       
-
+      <!-- Navegación del carrusel -->
+      <div class="swiper-button-next !text-teal-500 !w-10 !h-10 !rounded-full !bg-white/80 hover:!bg-white !shadow-lg !transition-all"></div>
+      <div class="swiper-button-prev !text-teal-500 !w-10 !h-10 !rounded-full !bg-white/80 hover:!bg-white !shadow-lg !transition-all"></div>
     </div>
   </div>
 </section>
@@ -764,6 +788,36 @@
         disableOnInteraction: false,
       },
     });
+
+    // Carrusel de clientes con configuración responsiva
+    new Swiper('.clientesSwiper', {
+      loop: true,
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2.5,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 3.5,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
   </script>
 
 
@@ -1030,6 +1084,8 @@
     }
   });
 </script>
+<!-- SwiperJS JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </body>
 

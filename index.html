@@ -200,16 +200,31 @@
     margin: 0 auto;
   }
 
-  /* Ocultar navegación en móviles pequeños */
+  /* Mostrar navegación en todos los dispositivos */
   .clientesSwiper .swiper-button-next,
   .clientesSwiper .swiper-button-prev {
-    display: none;
+    display: flex;
+    color: #1f2937;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
   }
 
-  @media (min-width: 768px) {
+  .clientesSwiper .swiper-button-next:hover,
+  .clientesSwiper .swiper-button-prev:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #059669;
+  }
+
+  /* Ajustar tamaño de flechas en móvil */
+  @media (max-width: 767px) {
     .clientesSwiper .swiper-button-next,
     .clientesSwiper .swiper-button-prev {
-      display: flex;
+      width: 35px;
+      height: 35px;
+      margin-top: -17.5px;
     }
   }
 
@@ -847,10 +862,7 @@
       slidesPerView: 1,
       spaceBetween: 15,
       centeredSlides: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
+      autoplay: false, // Desactivado en móvil
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -860,21 +872,31 @@
           slidesPerView: 1.5,
           spaceBetween: 20,
           centeredSlides: true,
+          autoplay: false, // Desactivado en tablets
         },
         640: {
           slidesPerView: 2.5,
           spaceBetween: 30,
           centeredSlides: true,
+          autoplay: false, // Desactivado en pantallas medianas
         },
         768: {
           slidesPerView: 3.5,
           spaceBetween: 40,
           centeredSlides: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
         },
         1024: {
           slidesPerView: 4,
           spaceBetween: 50,
           centeredSlides: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
         },
       },
     });

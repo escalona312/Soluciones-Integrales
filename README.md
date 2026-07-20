@@ -1,123 +1,43 @@
-# DemoContru - Sitio Web de Construcción
+# Soluciones Integrales — sitio web
 
-Sitio web profesional para servicios de construcción en Angol, Chile.
+Sitio estático de Soluciones Integrales, empresa de construcción, electricidad, mantenimiento y renovaciones en Angol, La Araucanía.
 
-## 🚀 Instalación y Configuración
+## Desarrollo
 
-### Prerrequisitos
-- Node.js (versión 14 o superior)
-- npm
+Requiere Node.js 18 o superior.
 
-### Instalación
-
-1. **Instalar dependencias:**
-   ```bash
-   npm install
-   ```
-
-2. **Compilar CSS de Tailwind:**
-   ```bash
-   npm run build
-   ```
-
-3. **Para desarrollo (modo watch):**
-   ```bash
-   npm run build
-   ```
-   Esto compilará automáticamente los cambios en el CSS.
-
-4. **Para producción (CSS minificado):**
-   ```bash
-   npm run build:prod
-   ```
-
-## 📁 Estructura del Proyecto
-
-```
-DemoContru/
-├── 📄 Archivos principales
-│   ├── index.html             # Página principal
-│   ├── trabajos.html          # Página de trabajos
-│   ├── package.json           # Dependencias y scripts
-│   ├── package-lock.json      # Lock de dependencias
-│   └── README.md             # Documentación
-│
-       ├── 📄 Archivos de configuración
-       │   ├── tailwind.config.js     # Configuración de Tailwind CSS
-       │   └── postcss.config.js      # Configuración de PostCSS
-│
-├── 📁 src/                   # Código fuente
-│   └── input.css             # Archivo CSS de entrada con directivas de Tailwind
-│
-├── 📁 dist/                  # Archivos compilados
-│   └── output.css            # CSS compilado de Tailwind (generado automáticamente)
-│
-├── 📁 images/                # Imágenes del sitio
-│   ├── *.png                 # Imágenes PNG
-│   └── *.jpg                 # Imágenes JPG
-│
-├── 📁 icons/                 # Iconos SVG
-│   └── *.svg                 # Iconos del sitio
-│
-├── 📁 galeria/               # Galería de trabajos
-│   ├── empaste,yeso y pintura/
-│   ├── Postacion y cableado aéreo para instalaciones ele trica domiciliarias/
-│   └── WhatsApp Unknown 2025-07-31 at 3.01.54 AM/
-│
-├── 📁 assets/                # Recursos multimedia
-│   └── videos/               # Videos del sitio
-│
-└── 📁 node_modules/          # Dependencias de Node.js
+```bash
+npm install
+npm run dev
 ```
 
-## 🎨 Personalización de Tailwind
+El modo de desarrollo recompila `dist/output.css` cuando cambian los HTML, `site.js` o `src/input.css`. Para visualizar el sitio se puede usar cualquier servidor estático local.
 
-### Colores Personalizados
-El proyecto incluye colores personalizados:
-- `primary`: Paleta de azules
-- `secondary`: Paleta de púrpuras
+## Producción
 
-### Componentes Personalizados
-- `.btn-primary`: Botón principal con gradiente
-- `.btn-secondary`: Botón secundario
-- `.card`: Tarjeta con efectos hover
-- `.section-padding`: Padding estándar para secciones
-- `.container-custom`: Contenedor personalizado
+```bash
+npm run build
+```
 
-### Utilidades Personalizadas
-- `.text-gradient`: Texto con gradiente
-- `.bg-gradient-primary`: Fondo con gradiente primario
-- `.bg-gradient-secondary`: Fondo con gradiente secundario
+El proceso genera el CSS minificado y valida automáticamente:
 
-## 🔧 Scripts Disponibles
+- recursos locales y anclas;
+- identificadores duplicados;
+- texto alternativo y dimensiones de imágenes;
+- seguridad básica de enlaces externos.
 
-- `npm run build`: Compila CSS en modo desarrollo con watch
-- `npm run build:prod`: Compila CSS minificado para producción
+## Estructura
 
-## 📱 Características
+- `index.html`: portada, servicios, proyectos destacados, clientes, empresa y contacto.
+- `trabajos.html`: portafolio filtrable y galería de construcción de casas.
+- `site.js`: navegación, animaciones, galerías, filtros, diálogo y formulario de WhatsApp.
+- `src/input.css`: sistema visual responsive y accesible.
+- `images/optimized`: derivados WebP de las fotografías originales más pesadas.
+- `galeria`: archivo fotográfico de trabajos realizados.
+- `scripts/check-site.mjs`: verificación previa a publicación.
 
-- ✅ Diseño responsive
-- ✅ Animaciones suaves
-- ✅ Optimización SEO
-- ✅ Integración con WhatsApp
-- ✅ Galería de trabajos con Swiper
-- ✅ Formulario de contacto
-- ✅ Mapa de ubicación
+## Contacto
 
-## 🚀 Despliegue
-
-Para desplegar el sitio:
-
-1. Ejecuta `npm run build:prod` para generar el CSS optimizado
-2. Sube todos los archivos al servidor web
-3. Asegúrate de que la carpeta `dist/` esté incluida
-
-## 📞 Contacto
-
-- **Teléfono:** +56 9 3517 2731
-- **Email:** mauricioeazocar@gmail.com
-- **Ubicación:** Cerro Negro #1388, Angol, Araucanía, Chile
-
----
-
-Desarrollado con ❤️ para Soluciones Integrales 
+- Teléfono: +56 9 3517 2731
+- Correo: mauricioeazocar@gmail.com
+- Dirección: Cerro Negro #1388, Angol, Araucanía, Chile

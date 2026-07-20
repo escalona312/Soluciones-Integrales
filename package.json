@@ -2,14 +2,11 @@
   "name": "soluciones-integrales-landing",
   "version": "1.0.0",
   "description": "Landing page para Soluciones Integrales - Constructor profesional en Angol",
-  "main": "index.html",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "check": "node ./scripts/check-site.mjs",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify && npm run check",
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "optimize-images": "node scripts/optimize-images.js",
-    "compress": "gzip -k dist/output.css",
-    "build-prod": "npm run build && npm run compress"
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },
   "keywords": [
     "construccion",
@@ -20,11 +17,8 @@
   "author": "Soluciones Integrales",
   "license": "MIT",
   "devDependencies": {
-    "tailwindcss": "^3.4.0",
     "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32"
-  },
-  "dependencies": {
-    "swiper": "^11.0.5"
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"
   }
-} 
+}

@@ -1389,8 +1389,8 @@ body.dialog-is-open {
 
 .video-frame {
   position: relative;
-  width: min(100%, 440px);
-  margin-top: 34px;
+  width: min(100%, 340px);
+  margin: 34px auto 0;
   padding: 9px 9px 0;
   overflow: hidden;
   border-radius: 12px;
@@ -1400,7 +1400,7 @@ body.dialog-is-open {
 
 .video-frame video {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 9 / 16;
   background: #0b0c0a;
   object-fit: cover;
 }
@@ -3021,7 +3021,7 @@ body.dialog-is-open {
   }
 
   .video-frame {
-    width: min(100%, 520px);
+    width: min(100%, 340px);
   }
 
   .form-row {
@@ -3304,7 +3304,7 @@ body.dialog-is-open {
   }
 
   .video-frame {
-    width: 100%;
+    width: min(100%, 340px);
     box-shadow: 8px 8px 0 var(--orange);
   }
 

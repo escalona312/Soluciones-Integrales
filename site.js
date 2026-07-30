@@ -176,14 +176,20 @@ function initializeAboutStory() {
 function initializeClientRail() {
   let viewport = document.querySelector("[data-client-rail]");
   let track = viewport?.querySelector(".client-rail__track");
-  let groups = track?.querySelectorAll(".client-rail__group");
-  if (!viewport || !track || !groups || groups.length !== 2) return;
+  let primaryGroup = track?.querySelector(".client-rail__group");
+  if (!viewport || !track || !primaryGroup) return;
 
-  let primaryGroup = groups[0];
-  let duplicateGroup = groups[1];
   let sourceItems = Array.from(primaryGroup.children);
   let resizeFrame = 0;
   if (sourceItems.length === 0) return;
+
+  let duplicateGroup = primaryGroup.cloneNode(true);
+  if (!(duplicateGroup instanceof HTMLElement)) return;
+
+  duplicateGroup.setAttribute("aria-hidden", "true");
+  duplicateGroup.setAttribute("data-client-rail-duplicate", "");
+  for (let image of duplicateGroup.querySelectorAll("img")) image.alt = "";
+  track.append(duplicateGroup);
 
   function removeGeneratedClones() {
     let clones = track.querySelectorAll("[data-client-rail-clone]");
